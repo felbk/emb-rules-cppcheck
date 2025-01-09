@@ -13,7 +13,7 @@ int main(void) {
     int result = multiplyNumbers(a, b);
 
     int arr[NUM_ELEMENTS];
-    for(int i = 0; i < NUM_ELEMENTS; i++) { //arrayIndexOutOfBounds
+    for(int i = 0; i < NUM_ELEMENTS; i++) { //arrayIndexOutOfBound
         arr[i] = i;
     }
 
