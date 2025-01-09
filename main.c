@@ -1,22 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "stdio.h"
 
-#define NUM_ELEMENTS 5
+// ..
 
-int multiplyNumbers(int x, int y) {
-    int product = x * y;
-    return product;
+int a = 0; // var global
+int b = 0; // var global
+
+void foo(void) {
+    a = a + 1; // acessa variavel global
 }
 
-int main(void) {
-    int a = 5;
-    int b = 4; //uninitvar, legacyUninitvar
-    int result = multiplyNumbers(a, b);
-
-    int arr[NUM_ELEMENTS];
-    for(int i = 0; i < NUM_ELEMENTS; i++) { //arrayIndexOutOfBound
-        arr[i] = i;
+void main(void) {
+    while (1) {
+        foo();
+        
+        if (a > 5) {
+            b = 1;
+        }
     }
-
-    return 0;
 }
